@@ -1,0 +1,11 @@
+# Ignore node_modules
+node_modules/
+# Ignore unnecessary files
+tailwind.config.js
+postcss.config.js
+package.json
+package-lock.json
+src/input.css
+# Git files and system
+.DS_Store
+*.log
