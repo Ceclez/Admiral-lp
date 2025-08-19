@@ -9,3 +9,6 @@ src/input.css
 # Git files and system
 .DS_Store
 *.log
+# Others
+.vscode
+dashboard.html

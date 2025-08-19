@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
+    <!--JS-->
     <script src="src/main.js" defer></script>
+    <!--LOTTIE-PLAYER-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- AOS EFFECTS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Admiral QDynamics</title>
 </head>
-<body class="bg-black">
+<body class="bg-black relative w-full">
+    <!-- BACKGROUND
+    <div class="w-full h-auto absolute top-0 left-0">
+         <lottie-player
+         src="assets/animations/Background.json"
+         background="transparent"
+         speed="1"
+         class="w-full h-auto"
+         loop
+         autoplay>
+        </lottie-player>
+    </div> -->
+
+    <!-- GENERAL CONTAINER -->
     <div class="w-full overflow-x-hidden">
                 
         <!-- HEROS/HEADER SECTION -->
@@ -18,519 +37,82 @@
                     <img class="w-28 mq-319:w-[110px]" src="assets/img/admiral-qdynamics-logo.svg" alt="Admiral QDynamics logo">
                 </div>
                 <!-- NAV BAR -->
-                <ul class="flex-wrap justify-center gap-8 w-full md:w-96 h-5 mt-4 md:mt-0 translate-y-[-6px] mq-319:hidden lg:flex">
-                    <li><a href="" class="text-white text-lg font-display">Platform</a></li>
-                    <li><a href="" class="text-white text-lg font-display">Features</a></li>
-                    <li><a href="" class="text-white text-lg font-display">Testimonials</a></li>
-                    <li><a href="" class="text-white text-lg font-display">Contact</a></li>
+                <ul class="flex-wrap justify-center gap-8 md:w-[410px] h-5 mt-4 md:mt-0 translate-y-[-6px] mq-319:hidden lg:flex">
+                    <li><a href="" class="text-white text-lg font-SF-Pro-Display transition duration-300 ease-in-out lg:hover:text-[#999]">Platform</a></li>
+                    <li><a href="" class="text-white text-lg font-SF-Pro-Display transition duration-300 ease-in-out lg:hover:text-[#999]">Features</a></li>
+                    <li><a href="" class="text-white text-lg font-SF-Pro-Display transition duration-300 ease-in-out lg:hover:text-[#999]">Testimonials</a></li>
+                    <li><a href="" class="text-white text-lg font-SF-Pro-Display transition duration-300 ease-in-out lg:hover:text-[#999]">Contact</a></li>
                 </ul>
                 <section class="justify-center gap-2 w-full md:w-[260px] h-12 mt-4 md:mt-0 relative mq-319:hidden lg:flex">
                     <button class="w-[120px] h-full rounded-full">
-                        <a href="" class="font-display text-lg text-white relative border-fade-bottom">Get a demo</a>
+                        <a href="" class="font-SF-Pro-Display text-lg text-white relative border-fade-bottom transition duration-300 ease-in-out lg:hover:text-[#999]">Get a demo</a>
                     </button>
                     <div class="absolute top-0 left-0 light-blue"></div>
-                    <button class="w-[140px] h-full bg-white rounded-full">
-                        <a href="" class="font-display text-lg text-black">Contact us</a>
+                    <button>
+                        <a href="" class="flex justify-center items-center font-SF-Pro-Display text-lg w-[140px] h-full bg-white rounded-full text-black transition duration-300 ease-in-out lg:hover:bg-transparent lg:hover:border lg:hover:border-white lg:hover:text-white">Contact us</a>
                     </button>
                 </section>
                 <!--  ICON TO SHOW NAV BAR AT SMALL SCREENS-->
                 <img class="w-10 absolute top-5 right-0 self-end cursor-pointer mq-319:flex mq-484:w-12 mq-484:top-4 lg:hidden" id="menu-icon" src="assets/icons/menu-icon.svg" alt="Menu icon">
                 <!-- NAV BAR (SHOWN DOWN TO "lg: 1024px") -->
-                <section class="flex flex-col gap-4 w-[240px] h-[100vh] px-6 py-11 fixed top-0 left-0 border border-r-[#242424] bg-gradient-to-t from-[#000] to-[#030339] translate-x-[-100%] lg:hidden z-30" id="aside-menu">
+                <section class="flex flex-col gap-4 w-[240px] h-[100vh] px-6 py-11 fixed top-0 left-0 border border-r-darkgray bg-gradient-to-t from-[#000] to-[#030339] translate-x-[-100%] lg:hidden z-30" id="aside-menu">
                     <ul class="flex flex-col gap-8 pl-6 pb-10 w-full lg:hidden">
-                        <li><a href="" class="text-white text-lg font-display">Platform</a></li>
-                        <li><a href="" class="text-white text-lg font-display">Features</a></li>
-                        <li><a href="" class="text-white text-lg font-display">Testimonials</a></li>
-                        <li><a href="" class="text-white text-lg font-display">Contact</a></li>
+                        <li><a href="" class="text-white text-lg font-SF-Pro-Display">Platform</a></li> 
+                        <li><a href="" class="text-white text-lg font-SF-Pro-Display">Features</a></li>
+                        <li><a href="" class="text-white text-lg font-SF-Pro-Display">Testimonials</a></li>
+                        <li><a href="" class="text-white text-lg font-SF-Pro-Display">Contact</a></li>
                     </ul>
-                    <section class="flex flex-col gap-6 pt-8 border border-t-[#242424] lg:hidden">
+                    <section class="flex flex-col gap-6 pt-8 border border-t-darkgray lg:hidden">
                         <button class="w-[134px] h-12 rounded-[100px]">
-                            <a href="" class="font-display text-lg text-white relative border-fade-bottom">Get a demo</a>
+                            <a href="" class="font-SF-Pro-Display text-lg text-white relative border-fade-bottom">Get a demo</a>
                         </button>
                         <button class="w-[134px] h-12 rounded-[100px] bg-white">
-                            <a href="" class="font-display text-lg text-black">Contact us</a>
+                            <a href="" class="font-SF-Pro-Display text-lg text-black">Contact us</a>
                         </button>
                     </section>
                 </section>
             </section>
 
             <!-- HERO CONTENT -->
-            <section class="flex flex-col self-center mt-10 w-full max-w-[800px] h-auto text-white mq-319:mt-10 mq-319:gap-[20px] mq-319:w-full mq-640:mt-[16px] mq-869:mt-14 lg:mt-[72px] lg:gap-[18px]">
-                <h1 class="text-center text-[42px] sm:text-[64px] tracking-[-1%] leading-[1.2] font-display mq-319:text-[40px] mq-319:text-balance mq-319:leading-[1.2] mq-319:w-full mq-484:text-[44px] mq-484:w-[90%] mq-484:m-auto mq-580:text-[52px] lg:w-full lg:text-wrap">
+            <section class="flex flex-col self-center mt-10 w-full max-w-[800px] h-auto text-white mq-319:mt-10 mq-319:gap-[20px] mq-319:w-full mq-640:mt-[16px] lg:mt-[72px] lg:gap-[18px]">
+                <h1 class="text-center text-[42px] sm:text-[64px] tracking-[-1%] leading-[1.2] font-SF-Pro-Display mq-319:text-[40px] mq-319:text-balance mq-319:leading-[1.2] mq-319:w-full mq-484:text-[44px] mq-484:w-[90%] mq-484:m-auto mq-580:text-[52px] lg:w-full lg:text-wrap">
                     Smarter Device Management. Zero Friction
                 </h1>
-                <p class="text-balance text-center leading-[1.7] text-lg text-white/80 mt-2 mq-319:leading-[1.8] mq-319:text-[16px] mq-319:text-balance mq-319-w-[90%] mq-319-mx-auto mq-484:w-[80%] mq-484:mx-auto lg:text-[18px] lg:mt-0">
+                <p class="font-SF-Pro-Display text-balance text-center leading-[1.7] text-lg text-white/80 mt-2 mq-319:leading-[1.8] mq-319:text-[16px] mq-319:text-balance mq-319-w-[90%] mq-319-mx-auto mq-484:w-[80%] mq-484:mx-auto lg:text-[18px] lg:mt-0">
                     Admiral is your control center for managing large fleets of Linux devices through secure tunnels and real-time rollouts all from a unified dark-mode dashboard
                 </p>
-                <section class="flex flex-col sm:flex-row justify-center gap-6 mt-6 mq-w-full mq-319:mt-2.5 mq-319:flex-row mq-319-gap-3.5">
-                    <button class="h-14 w-full sm:w-[219px] bg-[#2156E9] border-none p-[1px] rounded-[50px] mq-319:w-[50%] mq-319:h-[50px] lg:h-[56px]">
-                        <a href="" class="text-white text-lg w-full h-full flex justify-center items-center border-[#2156E9] rounded-[50px] mq-319:text-[16px] lg:text-lg">Start for Free</a>
+                <section class="font-SF-Pro-Display flex flex-col sm:flex-row justify-center gap-6 mt-6 mq-w-full mq-319:mt-2.5 mq-319:flex-row mq-319-gap-3.5">
+                    <button class="group h-14 w-full sm:w-[219px] bg-blue border-none p-[1px] rounded-[50px] mq-319:w-[50%] mq-319:h-[50px] lg:h-[56px] group transition duration-300 ease-in-out lg:hover:bg-[#4954F1]">
+                        <a href="" class="text-white text-lg w-full h-full flex justify-center items-center border-blue rounded-[50px] mq-319:text-[16px] lg:text-lg lg:group-hover:border-[#4954F1]">Start for Free</a>
                     </button>
                     <button class="mq-319:w-[50%] mq-319:h-[50px] h-14 w-full sm:w-[219px] bg-[linear-gradient(to_right,_#fff,_#555)] border-none rounded-[50px] p-[1px] lg:h-[56px]">
-                        <a href="" class="text-white text-lg w-full h-full flex justify-center items-center bg-[#0B0B0B] rounded-[50px] mq-319:text-[16px] lg:text-lg">Watch Demo</a>
+                        <a href="" class="text-white text-lg w-full h-full flex justify-center items-center bg-[#0B0B0B] rounded-[50px] mq-319:text-[16px] lg:text-lg transition duration-300 ease-in-out lg:hover:bg-[#000000c9]">Watch Demo</a>
                     </button>
                 </section>
             </section>
 
-            <!-- GRADIENT -->
-            <div class="radial-gradient-bg mq-1200:w-[50%] mq-1200:left-[30%]"></div>
         </header>
 
         <!-- MAIN CONTENT CONTAINER -->
         <main class="flex flex-col mq-319:mt-6 mq-640:mt-0">
-
-            <!-- DASHBOARD, ASIDE MENU AND OTHERS SECTION CONTAINER -->
-            <section class="flex self-center bg-black mq-319:w-full mq-366:px-[2%] mq-450:px-[16px] mq-1200:w-[100%] mq-1200:px-12 mq-1300:w-[1230px] mq-1300:px-0"> 
-
-                <!-- MAIN SECTION: ASIDE -->
-                <section class="flex flex-col h-[855px] py-6 px-2.5 border-r border-r-[#121320] mq-319:hidden mq-680:block mq-1200:w-[210px]"> <!--↓↓ LITTE ASIDE SECTION WITH ADMIRAL LOGO ↓↓-->
-                    <img class="w-[105px] ml-3" src="assets/img/admiral-qdynamics-logo.svg" alt="Admiral QDynamics logo"> <!--LOGO OR IMAGE HERE-->     
-                    <section class="flex flex-col gap-1.5 mt-10">
-                        <h3 class="text-nohover text-[9.23px] pl-3">GENERAL</h3>
-                        <ul class="flex flex-col gap-[7px]">
-                            <li class="flex gap-3 pl-3 py-3 rounded-full bg-[#080E25]">
-                                <img src="assets/icons/dashboard-speed-01.svg" alt=""> <!--LOGO OR IMAGE HERE-->
-                                <a href="" class="text-white text-xs">
-                                    Dashboard
-                                </a>
-                            </li>
-                            <li class="flex gap-3 pl-3 py-3">
-                                <img src="assets/icons/Fleet.svg" alt=""> <!--LOGO OR IMAGE HERE-->
-                                <a href="" class="text-nohover text-xs">
-                                    Fleets
-                                </a>
-                            </li>
-                            <li class="flex gap-3 pl-3 py-3">
-                                <img src="assets/icons/CPU.svg" alt=""> <!--LOGO OR IMAGE HERE-->
-                                <a href="" class="text-nohover text-xs">
-                                    Devices
-                                </a>
-                            </li>
-                        </ul>
-                        <h3 class="text-nohover mt-3.5 text-[9.23px] pl-3">OTHERS</h3>
-                        <ul class="flex flex-col gap-[7px]">
-                            <li class="flex gap-3 pl-3 py-3">
-                                <img src="assets/icons/rocket-01.svg" alt=""> <!--LOGO OR IMAGE HERE-->
-                                <a href="" class="text-nohover text-xs">
-                                    Rollouts
-                                </a>
-                            </li>
-                            <li class="flex gap-3 pl-3 py-3">
-                                <img src="assets/icons/Icons.svg" alt=""> <!--LOGO OR IMAGE HERE-->
-                                <a href="" class="text-nohover text-xs">
-                                    Settings
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="flex justify-center mt-[427px] mq-680:mt-[870px] mq-1200:mt-[434px]">
-                        <button class="flex justify-center items-center h-[26px] w-16">
-                            <img class="w-3.5 " src="assets/icons/light.svg" alt="Sun icon"> <!--LOGO OR IMAGE HERE-->
-                        </button>
-                        <button class="flex justify-center items-center h-[26px] w-16">
-                            <img class="w-3.5 " src="assets/icons/filled.svg" alt="Moon icon"> <!--LOGO OR IMAGE HERE-->
-                        </button>
-                    </section>
-                </section>
-
-                <!-- DASHBOARD OVERVIEW SECTION -->
-                <section class="flex flex-col w-full gap-5 mq-319:py-4 mq-319:px-[18px] mq-1200:px-6"> 
-                    <!-- TOP BAR / PROFILE SECTION -->
-                    <section class="flex justify-between items-center py-4 border-b border-b-[#121320] mq-319:pt-2.5"> 
-
-                        <h2 class="text-white text-lg font-medium">Dashboard Overview</h2>
-                    
-                        <button class="flex justify-center self-center gap-6 cursor-pointer relative" id="profile-btn">
-                            <img class="w-4 mq-319:hidden mq-580:block" src="assets/icons/ai-search.svg" alt="Search icon"> <!--LOGO OR IMAGE HERE-->
-                            <div class="relative flex">
-                                <img class="w-4 mq-319:hidden mq-580:block" src="assets/icons/Notification.svg" alt="Notifications icon"> <!--LOGO OR IMAGE HERE (USE BEFORE/AFTER TO NOTIFICATIONS ICON)-->
-                                <!-- NOTIFICATIONS NUMBER (CHANGE VALUE) -->
-                                <div class="absolute top-[-4px] right-[-12px] w-3.5 h-3.5 text-[10px] rounded-[50%] font-semibold bg-[#2156E9] text-white mq-319:hidden mq-580:block">
-                                    <p class="translate-y-[-0.5px]">2</p>
-                                </div>
-                            </div>                            
-                            <div class="flex gap-2.5 items-center">
-                                <img class="w-[30px] rounded-full" src="assets/img/photo-profile.jpg" alt="Profile photo">
-                                <div class="flex flex-col gap-0.5 mq-319:hidden mq-580:block">
-                                    <p class="text-[#828287] text-start text-[9px]">@ryan977</p>
-                                    <p class="text-white text-[10px]">Ryan Crowford</p>
-                                </div>
-                            </div>
-                            <img class="w-2.5 ml-[-6px]" src="assets/icons/elements.svg" alt="Down arrow icon"> <!--LOGO OR IMAGE HERE (DOWN ARROW)-->
-                            
-                            <!-- DEPLOY PROFILE SECTION ON CLICK (ONLY SMALL SCREENS <580px)-->
-                            <section class="flex flex-col absolute top-[58px] left-[-52px] p-3.5 bg-[#0A0B14] rounded-[10px] z-20 w-[134px] border border-[#222] mq-319:max-h-0 mq-319:opacity-0 mq-319:invisible mq-580:hidden" id="profile-btn-elements">
-                                <div class="flex flex-col gap-[22px]">
-                                    <div class="flex flex-col">
-                                        <p class="text-[#828287] text-start text-[9px] mb-1">@ryan977</p>
-                                        <p class="text-white text-[10px] text-start pb-3.5 border-b border-[#222]">Ryan Crowford</p>
-                                    </div>
-                                    <div class="flex items-center gap-2.5">
-                                        <img class="w-4" src="assets/icons/Notification.svg" alt="Notifications icon"> <!--LOGO OR IMAGE HERE (USE BEFORE/AFTER TO NOTIFICATIONS ICON)-->
-                                        <!-- NOTIFICATIONS NUMBER (CHANGE VALUE) -->
-                                        <div class="w-3.5 h-3.5 text-[10px] rounded-[50%] font-semibold bg-[#2156E9] text-white">
-                                            <p class="translate-y-[-0.5px]">2</p>
-                                        </div>
-                                    </div>
-                                    <img class="w-4" src="assets/icons/ai-search.svg" alt="Search icon"> <!--LOGO OR IMAGE HERE-->
-                                </div>                            
-                            </section>
-                        </button>
-                    </section>
-
-                    <!-- LEADING EDGE DEVICES SECTION -->
-                    <section class="flex justify-between items-center mq-319:flex-col mq-319:gap-2.5 mq-319:items-baseline mq-538:flex-row mq-538:items-center">
-                        <div class="flex flex-col">
-                            <div class="flex text-white gap-[9px]">
-                                <span class="text-[#B4B4B7] leading-[27px] mq-319:text-[10px] mq-640:text-[13px]">Smart Fleet Suggestions</span>
-                                <span class="text-[10px] text-white p-[7px] rounded-[46px]">3 Feets</span>
-                            </div>
-                            <h2 class="text-white font-medium mq-319:text-[20px] mq-869:text-2xl">Leading Edge Devices</h2>
-                        </div>
-
-                        <div class="flex gap-3">
-                            <button class="flex items-center gap-1.5 py-2.5 px-6 bg-[#161720] border border-[#5C5C63] rounded-[39px] text-white text-xs cursor-pointer">
-                                <img class="w-3 translate-y-[1px]" src="assets/icons/configure.svg" alt="Configure icon">
-                                Configure
-                            </button>
-                            <button class="flex items-center gap-1.5 py-2.5 px-6 bg-[#2156E9] border border-[#2156E9] rounded-[39px] text-white text-xs cursor-pointer">
-                                <img class="w-3 translate-y-[1px]" src="assets/icons/plus.svg" alt="Plus icon">
-                                Add Device
-                            </button>
-                        </div>
-                    </section>
-
-                    <!-- ALERTS SECTION -->
-                    <section class="flex justify-between items-center py-3 px-[18px] bg-[#32111A] border border-[#E73F44] rounded-xl mq-319:mb-6 mq-869:mb-3">
-                        <p class="text-white mq-319:text-sm mq-869:text-[16px]">
-                            Alerts and Issues
-                            <span class="inline-block ml-[9px] bg-[#E73F44] text-[10px] py-[3px] px-[7px] translate-y-[-2px] rounded-[46px]">3 Active</span>
-                        </p>
-                        <img class="w-4 ml-[-6px] cursor-pointer" src="assets/icons/elements.svg" alt="Down arrow icon"> <!--LOGO OR IMAGE HERE (DOWN ARROW)-->
-                    </section>
-
-                    <!-- DATA / STATISTICS SECTION -->
-                    <section class="flex w-full gap-[18px] mq-319:flex-col mq-319:h-auto mq-319:pb-6 mq-680:flex-row mq-1200:pb-0 mq-1200:h-[210px]">
-                        <article class="flex flex-col w-full p-[18px] rounded-[18px] gap-5 bg-[#0A0B14] border border-[#242424] mq-450:h-[240px] mq-580:h-[260px] mq-680:h-[210px] mq-869:h-auto mq-1200:h-full">
-                            <div class="flex flex-col gap-[3px]">
-                                <span class="text-white text-[15px]">Total Devices</span>
-                                <span class="text-white text-[30px]">1,250</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <div class="flex flex-col gap-1.5 w-[65%]">
-                                    <span class="text-[#B5B6B8] text-xs">Online</span>
-                                    <div class="h-[28px] border-l border-solid border-[#3B3C43]"></div> <!--LINE BETWEEN ONLINE AND BAR-->
-                                    <div class="w-full h-[6px] rounded-[76px]"> <!--BAR PROGRESS ONLINE-->
-                                        <div class="w-full h-full rounded-[76px] bg-gradient-to-r from-[#2156E9] via-[#93E7E9] to-[#FFAF7F]"></div>
-                                    </div>
-                                    <div class="flex gap-1.5">
-                                        <span class="text-[#2156E9] text-[26px] leading-[0.5]">•</span>
-                                        <span class="text-xs text-white">800</span>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col gap-1.5 w-[35%]">
-                                    <span class="text-[#B5B6B8] text-xs">Offline</span>
-                                    <div class="h-[28px] border-l border-solid border-[#3B3C43]"></div> <!--LINE BETWEEN ONLINE AND BAR-->
-                                    <div class="w-full h-[6px] rounded-[76px]"> <!--BAR PROGRESS ONLINE-->
-                                        <div class="w-full h-full rounded-[76px] bg-gradient-to-r from-[#FFAF7F] to-[#F78A49]"></div>
-                                    </div>
-                                    <div class="flex gap-1.5">
-                                        <span class="text-[#FFAF7F] text-[26px] leading-[0.5]">•</span>
-                                        <span class="text-xs text-white">450</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="flex flex-col w-full rounded-[18px] overflow-hidden relative p-[18px] bg-[#0A0B14] gap-[18px] border border-[#242424] mq-319:h-[207px] mq-450:h-[240px] mq-580:h-[260px] mq-680:h-[210px] mq-869:h-auto mq-1200:h-full">
-                            <div class="flex flex-col gap-1.5">
-                                <span class="text-white text-[16px]">Avg Device Uptime</span>
-                                <span class="text-white text-3xl">92.8%</span>
-                            </div>
-                            <div class="flex flex-col gap-1.5 mq-680:z-30">
-                                <div class="flex gap">
-                                    <img class="w-[22px]" src="assets/icons/green-arrow.svg" alt="Green arrow icon">
-                                    <span class="text-[#60EA66]">+2.5%</span>
-                                </div>
-                                <span class="text-xs text-[#848589]">from last week</span>
-                            </div>
-                            <div class="z-10 absolute w-[93px] h-full top-0 right-7 bg-gradient-to-t from-[#2156E9] to-[#0A0B1400] opacity-40 mq-580:w-[150px] mq-680:w-[93px]"></div>
-                            <img class="z-20 absolute top-[107px] left-0 w-full mq-390:top-[calc(92px+0vw)] mq-580:top-[10vw] mq-680:top-[107px]" src="assets/icons/vector-blue.svg" alt="Graphic blue line">
-                            <img class="z-20 absolute top-[167px] left-0 w-full mq-580:top-[26vw] mq-680:top-[167px]" src="assets/icons/vector-dark-gray.svg" alt="Horizontal line">
-                            <img class="z-20 absolute top-[74px] left-0 w-full mq-580:top-[6vw] mq-680:top-[74px]" src="assets/icons/vector-light-gray.svg" alt="Graphic gray line">
-                            <img class="z-20 absolute w-[32px] right-[105px] mq-319:top-[63%] mq-390:top-[120px] mq-420:top-[124px] mq-436:top-[128px] mq-450:top-[28vw] mq-580:top-[calc(105px+(100vw-580px)*0.3636)] mq-580:right-[161px] mq-680:hidden mq-960:flex mq-960:top-[100px] mq-960:right-[11px] mq-1200:top-[98px]" src="assets/icons/graphic-circle.svg" alt="Sphere">
-                            <img class="z-20 absolute w-[32px] right-[3.5%] mq-319:top-[48%] mq-390:top-[84px] mq-450:top-[83px] mq-450:right-[12px] mq-869:right-[3.5%] mq-580:top-[8vw] mq-680:top-[83px] mq-680:hidden mq-960:flex mq-960:top-[126px] mq-960:right-[104px] mq-1200:top-[129px]" src="assets/icons/graphic-circle.svg" alt="Sphere">
-                        </article>
-                        <!-- THREE ARC GRAPHICS -->
-                        <article class="flex flex-col relative w-full p-[18px] rounded-[18px] gap-5 bg-[#0A0B14] border border-[#242424] mq-319:h-[207px] mq-450:h-[240px] mq-580:h-[260px] mq-680:h-[210px] mq-1200:h-full">
-                            <section class="flex flex-col gap-1.5">
-                                <span class="text-white text-[16px]">Compliance Overview</span>
-                                <span class="text-white text-3xl">83%</span>
-                            </section>
-                            <section class="flex gap-3">
-                                <svg class="flex absolute top-[46px] left-[-5%] w-[65%] mq-680:w-[156px] mq-680:left-[-7px] mq-680:opacity-40 mq-680:top-[60px] mq-960:opacity-100 mq-1200:w-[65%] mq-1200:left-[-10px] mq-1200:top-[53px] mq-1300:left-[-12px]" width="300" height="180" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
-                                <!-- GRADIENT COLORS DATA -->
-                                <defs>
-                                    <linearGradient id="arcGradientBlue" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#0C94EF" /> <!--FIRST ARC COLORS BACKGROUND-->
-                                    <stop offset="100%" stop-color="#65C1FF" />
-                                    </linearGradient>
-                                    <linearGradient id="arcGradientLightBlue" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#49CEF7" /> <!--SECOND ARC COLORS BACKGROUND-->
-                                    <stop offset="100%" stop-color="#81DBFF" />
-                                    </linearGradient>
-                                    <linearGradient id="arcGradientOrange" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stop-color="#F78A49" /> <!--THIRD ARC COLORS BACKGROUND-->
-                                    <stop offset="100%" stop-color="#FFAF7F" />
-                                    </linearGradient>
-                                </defs>
-                                <!-- FIRST ARC BACKGROUND -->
-                                <path
-                                    d="M 50 150
-                                    A 100 100 0 0 1 250 150"
-                                    fill="none"
-                                    stroke="#1E1F2C"
-                                    stroke-width="10"
-                                    stroke-linecap="round"
-                                />
-                                <!-- FIRST ARC PROGRESS COLOR -->
-                                <path
-                                    d="M 50 150
-                                    A 100 100 0 0 1 250 150"
-                                    fill="none"
-                                    stroke="url(#arcGradientBlue)"
-                                    stroke-width="10"
-                                    stroke-linecap="round"
-                                    stroke-dasharray="314"
-                                    stroke-dashoffset="60"  
-                                />  <!--CHANGE "stroke-dashoffset" ↑↑ TO CHANGE PROGRESS IN BAR-->
-                                <!-- SECOND ARC BACKGROUND -->
-                                <path
-                                    d="M 65 150
-                                    A 85 85 0 0 1 235 150"
-                                    fill="none"
-                                    stroke="#1E1F2C"
-                                    stroke-width="10"
-                                    stroke-linecap="round"
-                                />
-                                <!-- SECOND ARC PROGRESS COLOR -->
-                                <path
-                                    d="M 65 150
-                                    A 85 85 0 0 1 235 150"
-                                    fill="none"
-                                    stroke="url(#arcGradientLightBlue)"
-                                    stroke-width="10"
-                                    stroke-linecap="round"
-                                    stroke-dasharray="267"
-                                    stroke-dashoffset="30" 
-                                />  <!--CHANGE "stroke-dashoffset" ↑↑ TO CHANGE PROGRESS IN BAR-->
-                                <!-- THIRD ARC BACKGROUND -->
-                                <path
-                                    d="M 80 150
-                                    A 70 70 0 0 1 220 150"
-                                    fill="none"
-                                    stroke="#1E1F2C"
-                                    stroke-width="10"
-                                    stroke-linecap="round"
-                                />
-                                <!-- THIRD ARC PROGRESS COLOR -->
-                                <path
-                                    d="M 80 150
-                                    A 70 70 0 0 1 220 150"
-                                    fill="none"
-                                    stroke="url(#arcGradientOrange)"
-                                    stroke-width="10"
-                                    stroke-linecap="round"
-                                    stroke-dasharray="220"
-                                    stroke-dashoffset="50"  
-                                />  <!--CHANGE "stroke-dashoffset" ↑↑ TO CHANGE PROGRESS IN BAR-->
-                                </svg>
-                                <div class="flex flex-col gap-4 absolute right-[24px] top-[104px] mq-680:gap-[10px] mq-680:top-[122px] mq-680:left-[17px] mq-680:w-full mq-960:ml-[43%] mq-1200:ml-[52%] mq-1300:left-[30px] mq-1300:top-[107px] mq-1300:gap-4.5">
-                                    <div class="flex gap-1">
-                                        <span class="text-[#2156E9] text-[26px] leading-[0.5]">•</span>
-                                        <span class="text-xs text-white">Up-to-Date</span>
-                                        <span class="text-xs text-white ml-1.5">76%</span>
-                                    </div>
-                                    <div class="flex gap-1">
-                                        <span class="text-[#4BCFF7] text-[26px] leading-[0.5]">•</span>
-                                        <span class="text-xs text-white">Online</span>
-                                        <span class="text-xs text-white ml-1.5">90%</span>
-                                    </div>
-                                    <div class="flex gap-1">
-                                        <span class="text-[#F88C4B] text-[26px] leading-[0.5]">•</span>
-                                        <span class="text-xs text-white">Security</span>
-                                        <span class="text-xs text-white ml-1.5">82%</span>
-                                    </div>
-                                </div>
-                            </section>
-                        </article>
-                    </section>
-
-                    <!-- MAP AND TABLE DATA SECTION -->
-                    <section class="grid grid-cols-2 gap-[18px] mq-319:flex mq-319:flex-col mq-319:h-auto mq-1200:h-[355px] mq-1200:flex-row mq-1200:w-full">
-                        <article class="flex flex-col relative p-[18px] rounded-[18px] gap-3.5 bg-[#0A0B14] border border-[#242424] mq-319:h-[370px] mq-1200:w-full mq-1200:h-full">
-                            <div class="flex justify-between">
-                                <span class="text-white text-[16px]">Map Session</span>
-                                <img class="mt-[-4px] rounded-[76px]" src="assets/icons/double-arrow.svg" alt="Double arrow icon">
-                            </div>
-                            <!-- MAP -->
-                            <div class="flex relative h-full mq-319:items-baseline mq-1200:items-center mq-680:justify-center mq-680:items-center">
-                                <img src="assets/icons/map.svg" alt="Map image from map sesion section">
-                                <div class="w-28 h-28 flex flex-col absolute top-9 right-3"></div>
-                            </div>
-                            <!-- MAP STATISTICS -->
-                            <div class="flex flex-col p-[15px] absolute w-[214px] h-[126px] gap-3 rounded-[9px] bg-gradient-to-b from-[#181B37] to-[#0C1235] shadow-[3.08px_3.08px_18.45px_0px_#0000000D] mq-319:top-[61%] mq-319:left-[7%] mq-1200:top-[124px] mq-1200:right-[16px] mq-869:top-[34%] mq-869:left-[60%] mq-1200:left-[46%] mq-1300:left-[260px]">
-                                <div class="flex items-center justify-between relative">
-                                    <div class="flex relative">
-                                        <svg class="flex absolute top-[-8px] left-[-35px] w-[143px]" width="77" height="76" viewBox="0 0 77 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path 
-                                            d="M65.9403 16.9463C67.0664 16.0806 67.2839 14.4592 66.3428 13.3954C61.7517 8.20636 55.7924 4.38534 49.1233 2.38593C41.6308 0.139684 33.6217 0.306288 26.2292 2.86217C18.8366 5.41805 12.4349 10.2338 7.92983 16.628C3.91976 22.3196 1.59311 29.0054 1.1874 35.9221C1.10423 37.34 2.27678 38.4808 3.69707 38.4661L6.01155 38.4421C7.43184 38.4273 8.55972 37.262 8.66733 35.8457C9.07385 30.4952 10.918 25.336 14.0267 20.9236C17.6308 15.8082 22.7522 11.9557 28.6662 9.91095C34.5803 7.86625 40.9875 7.73297 46.9815 9.52996C52.1517 11.08 56.7886 13.9985 60.4129 17.9553C61.3723 19.0027 62.9792 19.2226 64.1052 18.3569L65.9403 16.9463Z" 
-                                            fill="#2156E9" 
-                                            stroke="#161A36" 
-                                            stroke-width="0.857262"
-                                            />
-                                            <path 
-                                            opacity="0.5" 
-                                            d="M72.2354 30.2607C73.6191 29.9398 74.4892 28.5545 74.0737 27.1963C73.0408 23.8202 71.5336 20.6078 69.5975 17.6556C68.8185 16.4678 67.197 16.2516 66.0658 17.1105L64.2224 18.5102C63.0911 19.3692 62.8809 20.9772 63.6392 22.1782C64.9633 24.2751 66.0208 26.5291 66.7871 28.8877C67.226 30.2386 68.5971 31.1047 69.9807 30.7837L72.2354 30.2607Z" 
-                                            fill="#2156E9" 
-                                            stroke="#161A36" 
-                                            stroke-width="0.857262"
-                                            />
-                                            <path 
-                                            opacity="0.2" 
-                                            d="M73.1335 38.1061C74.5538 38.1061 75.7145 36.9533 75.6166 35.5363C75.5493 34.5614 75.4436 33.5895 75.2999 32.6229C75.0911 31.2179 73.7098 30.3415 72.3226 30.6466L70.0621 31.1439C68.6749 31.4491 67.8094 32.8206 67.994 34.2289C68.0511 34.664 68.0985 35.1003 68.1363 35.5375C68.2586 36.9526 69.3985 38.1061 70.8189 38.1061H73.1335Z" 
-                                            fill="#2156E9" 
-                                            stroke="#161A36" 
-                                            stroke-width="0.857262"
-                                            />
-                                        </svg>
-                                        <img class="static w-[52px] ml-[10.5px] mt-[3px]" src="assets/icons/Ellipse 1539.svg" alt="Elipse image">
-                                        <p class="text-white text-[15px] absolute mt-3 ml-[22px]">150</p>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-[10px] text-[#B5B6B8]">Fleet Name</span>
-                                        <span class="text-[13px] text-white">Warehouse-East</span>
-                                    </div>
-                                </div>
-                                <img src="assets/icons/line-division.svg" alt="Division line">
-                                <div class="grid grid-cols-2">
-                                    <div class="flex flex-col">
-                                        <span class="text-[10px] text-[#B5B6B8]">Compliance</span>
-                                        <span class="text-[13px] text-white">92%</span>
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-[10px] text-[#B5B6B8]">Location</span>
-                                        <div class="flex gap-1.5">
-                                            <img class="w-[18px]" src="assets/icons/australia-flag.svg" alt="Australia flag icon">
-                                            <span class="text-[13px] text-white">Australia</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <!-- TABLE DATA -->
-                        <article class="flex flex-col p-[18px] rounded-[18px] gap-5 bg-[#0A0B14] border border-[#242424] mq-319:overflow-x-auto mq-869:overflow-x-hidden mq-1200:w-full mq-1200:h-full mq-1200:overflow-clip">
-                            <div class="flex justify-between items-center mq-319:w-[427px] mq-319:overflow-x-auto mq-538:w-full mq-1200:overflow-visible">
-                                <span class="text-white text-[15px]">Fleet Status Overview</span>
-                                <span class="text-white text-xs underline">View All</span>
-                            </div>
-                            <table class="w-full text-xs font-display">
-                                <thead>
-                                    <tr class="text-white">
-                                        <th class="py-2 px-4 pl-[14px] text-left font-normal rounded-tl-[9px] rounded-bl-[9px] bg-[#15181E] whitespace-nowrap">Fleet Name</th>
-                                        <th class="py-2 px-4 text-left font-normal bg-[#15181E]">Devices</th>
-                                        <th class="py-2 px-4 text-left font-normal bg-[#15181E]">Online</th>
-                                        <th class="py-2 px-4 text-left font-normal bg-[#15181E]">Offline</th>
-                                        <th class="py-2 px-4 text-left font-normal bg-[#15181E] whitespace-nowrap">Compliance Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">Retail-Kiosk</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">150</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">140</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">10</td>
-                                        <td class="border-b border-[#191A22] p-3.5">
-                                            <span class="inline-flex items-center gap-1 px-[9px] py-1 rounded-[18px] text-[#60EA66] bg-[#13211C]">
-                                                <svg class="mr-0.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                                    <path d="M13.0003 7.1943C13.0003 4.00955 10.4186 1.42779 7.2338 1.42779C4.04904 1.42779 1.46729 4.00955 1.46729 7.1943C1.46729 10.3791 4.04904 12.9608 7.2338 12.9608C10.4186 12.9608 13.0003 10.3791 13.0003 7.1943Z" stroke="#60EA66" stroke-width="1.15333"/>
-                                                    <path d="M4.92737 7.48239L6.369 8.92402L9.54058 5.46411" stroke="#60EA66" stroke-width="1.15333" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                                Good
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">Warehouse-...</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">200</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">185</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">15</td>
-                                        <td class="border-b border-[#191A22] p-3.5">
-                                            <span class="inline-flex items-center gap-1 px-[9px] py-1 rounded-[18px] text-[#ECB60A] bg-[#211C13]">
-                                                <svg class="mr-0.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                                    <path d="M7.23392 4.70974V7.01639M7.24426 9.32305H7.23392M13.0006 7.01639C13.0006 10.2012 10.4187 12.783 7.23392 12.783C4.0491 12.783 1.46729 10.2012 1.46729 7.01639C1.46729 3.83157 4.0491 1.24976 7.23392 1.24976C10.4187 1.24976 13.0006 3.83157 13.0006 7.01639Z" stroke="#EDB70A" stroke-width="1.15333" stroke-linecap="round"/>
-                                                </svg>
-                                                Warning
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">TestBots-US</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">50</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">48</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">2</td>
-                                        <td class="border-b border-[#191A22] p-3.5">
-                                            <span class="inline-flex items-center gap-1 px-[9px] py-1 rounded-[18px] text-[#60EA66] bg-[#13211C]">
-                                                <svg class="mr-0.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                                    <path d="M13.0003 7.1943C13.0003 4.00955 10.4186 1.42779 7.2338 1.42779C4.04904 1.42779 1.46729 4.00955 1.46729 7.1943C1.46729 10.3791 4.04904 12.9608 7.2338 12.9608C10.4186 12.9608 13.0003 10.3791 13.0003 7.1943Z" stroke="#60EA66" stroke-width="1.15333"/>
-                                                    <path d="M4.92737 7.48239L6.369 8.92402L9.54058 5.46411" stroke="#60EA66" stroke-width="1.15333" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                                Good
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">Smart-City-...</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">85</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">70</td>
-                                        <td class="border-b border-[#191A22] text-[#B5B6B8] p-3.5">15</td>
-                                        <td class="border-b border-[#191A22] p-3.5">
-                                            <span class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-[18px] text-[#ECB60A] bg-[#211C13]">
-                                                <svg class="mr-0.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                                    <path d="M7.23392 4.70974V7.01639M7.24426 9.32305H7.23392M13.0006 7.01639C13.0006 10.2012 10.4187 12.783 7.23392 12.783C4.0491 12.783 1.46729 10.2012 1.46729 7.01639C1.46729 3.83157 4.0491 1.24976 7.23392 1.24976C10.4187 1.24976 13.0006 3.83157 13.0006 7.01639Z" stroke="#EDB70A" stroke-width="1.15333" stroke-linecap="round"/>
-                                                </svg>
-                                                Warning
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-[#B5B6B8] p-3">Warehouse-...</td>
-                                        <td class="text-[#B5B6B8] p-3">120</td>
-                                        <td class="text-[#B5B6B8] p-3">110</td>
-                                        <td class="text-[#B5B6B8] p-3">10</td>
-                                        <td class="p-3">
-                                            <span class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-[18px] text-[#CF383D] bg-[#1F0F18]">
-                                                <svg class="mr-0.5" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                                    <path d="M7.33765 5.53198V7.83864M7.34798 10.1453H7.33765" stroke="#E73F44" stroke-width="1.15333" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M13.288 11.4039L7.81137 2.02347C7.54983 1.57551 6.9181 1.57551 6.65656 2.02347L1.17989 11.4039C0.910596 11.8651 1.23389 12.4519 1.75729 12.4519L12.7106 12.4519C13.234 12.4519 13.5573 11.8651 13.288 11.4039Z" stroke="#E73F44" stroke-width="1.15333"/>
-                                                </svg>
-                                                Poor
-                                            </span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </article>
-                    </section>
-                </section>         
+            <!-- DASHBOARD SECTION ANIMATION-->
+            <section class="w-[1230px] mx-auto">
+                <lottie-player
+                    src="assets/animations/Admiral - Dashboard.json"
+                    background="transparent"
+                    speed="1"
+                    class="w-full h-full"
+                    loop
+                    autoplay>
+                </lottie-player>
             </section>
 
             <!-- INFORMATION SECTION (HOW IT WORKS) -->
             <section class="flex flex-col gap-10 items-center justify-center self-center mt-44 w-[1216px] mq-319:w-full mq-319:px-[18px] mq-640:px-8 mq-1300:w-[1216px]">
                 
                 <!-- TITLES -->
-                <section class="flex flex-col gap-[22px] text-white mq-319:w-full">
-                    <span class="flex self-center border border-[#595959] px-6 py-1 bg-[#121212] rounded-full text-base font-display mb-[-6px] mq-319:text-xs mq-869:text-[16px]">How It Works</span>
+                <section class="font-SF-Pro-Display flex flex-col gap-[22px] text-white mq-319:w-full">
+                    <span class="flex self-center border border-[#595959] px-6 py-1 bg-[#121212] rounded-full text-base font-SF-Pro-Display mb-[-6px] mq-319:text-xs mq-869:text-[16px]">How It Works</span>
 
                     <h2 class="text-center leading-[120%] tracking-[-1%] font-medium mq-319:text-[34px] mq-869:text-5xl">From Infrastructure to Impact</h2>
                     <p class="text-[#CCC] text-center self-center mq-319:text-sm mq-319:w-[85%] mq-869:text-[20px] mq-640:w-[500px] mq-869:w-[60%] mq-1300:w-[750px]">From defining runtime environments to executing precise rollouts — Admirals gives you complete control over your fleet in just three steps.</p>
@@ -540,30 +122,60 @@
                 <section class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
                     
                     <!-- Card 1 -->
-                    <div class="flex flex-col items-center bg-[#10111A] rounded-[32px] border border-[#2A2A2A] px-8 py-12 shadow-lg w-full">
-                        <img src="assets/img/define-image.svg" alt="Define Icon" class="w-20 h-20 mb-6">
-                        <h3 class="text-white text-2xl font-display mb-2">Define</h3>
-                        <p class="text-white/80 text-center text-base font-display">
+                    <div data-aos="fade-up" data-aos-delay="0" class="flex flex-col items-center bg-[#10111A] rounded-[32px] border border-[#2A2A2A] px-8 py-12 shadow-lg w-full cursor-pointer transition duration-300 ease-in-out lg:hover:border-[#333] lg:hover:bg-[#1d1e2d] lg:hover:translate-y-[-6px]">
+                        <!-- "DEFINE" ICON ANIMATION LOTTIE-PLAYER-->
+                        <lottie-player
+                            src="assets/animations/Define - Icon.json"
+                            background="transparent"
+                            speed="1"
+                            class="w-24 h-24 mb-6"
+                            loop
+                            autoplay
+                            data-aos="fade-up" data-aos-delay="0"
+                            >
+                        </lottie-player>
+                        <h3 data-aos="fade-up" data-aos-delay="0" class="text-white text-2xl font-SF-Pro-Display mb-2">Define</h3>
+                        <p data-aos="fade-up" data-aos-delay="0" class="text-white/80 text-center text-base font-SF-Pro-Display">
                             Deploy container images for<br>
                             Linux-based edge devices.
                         </p>
                     </div>
                     
                     <!-- Card 2 -->
-                    <div class="flex flex-col items-center bg-[#10111A] rounded-[32px] border border-[#2A2A2A] px-8 py-12 shadow-lg w-full">
-                        <img src="assets/img/monitor-image.svg" alt="Monitor Icon" class="w-20 h-20 mb-6">
-                        <h3 class="text-white text-2xl font-display mb-2">Monitor</h3>
-                        <p class="text-white/80 text-center text-base font-display">
+                    <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col items-center bg-[#10111A] rounded-[32px] border border-[#2A2A2A] px-8 py-12 shadow-lg w-full cursor-pointer transition duration-300 ease-in-out lg:hover:border-[#333] lg:hover:bg-[#1d1e2d] lg:hover:translate-y-[-6px]">
+                        <!-- "MONITOR" ICON ANIMATION LOTTIE-PLAYER-->
+                        <lottie-player 
+                            src="assets/animations/Monitor - Icon.json"
+                            background="transparent"
+                            speed="1"
+                            class="w-24 h-24 mb-6"
+                            loop
+                            autoplay
+                            data-aos="fade-up" data-aos-delay="200"
+                            >
+                        </lottie-player>
+                        <h3 data-aos="fade-up" data-aos-delay="200" class="text-white text-2xl font-SF-Pro-Display mb-2">Monitor</h3>
+                        <p  data-aos="fade-up" data-aos-delay="200" class="text-white/80 text-center text-base font-SF-Pro-Display">
                             View uptime, performance, and<br>
                             connectivity stats.
                         </p>
                     </div>
                     
                     <!-- Card 3 -->
-                    <div class="flex flex-col items-center bg-[#10111A] rounded-[32px] border border-[#2A2A2A] px-8 py-12 shadow-lg w-full">
-                        <img src="assets/img/rollout-image.svg" alt="Rollout Icon" class="w-20 h-20 mb-6">
-                        <h3 class="text-white text-2xl font-display mb-2">Rollout</h3>
-                        <p class="text-white/80 text-center text-base font-display">
+                    <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col items-center bg-[#10111A] rounded-[32px] border border-[#2A2A2A] px-8 py-12 shadow-lg w-full cursor-pointer transition duration-300 ease-in-out lg:hover:border-[#333] lg:hover:bg-[#1d1e2d] lg:hover:translate-y-[-6px]">
+                        <!-- "ROLLOUT" ICON ANIMATION LOTTIE-PLAYER-->
+                        <lottie-player
+                            src="assets/animations/Rollout - Icon.json"
+                            background="transparent"
+                            speed="1"
+                            class="w-24 h-24 mb-6"
+                            loop
+                            autoplay
+                            data-aos="fade-up" data-aos-delay="400"
+                            >
+                        </lottie-player>
+                        <h3 data-aos="fade-up" data-aos-delay="400" class="text-white text-2xl font-SF-Pro-Display mb-2">Rollout</h3>
+                        <p data-aos="fade-up" data-aos-delay="400" class="text-white/80 text-center text-base font-SF-Pro-Display">
                             Run updates via GitHub, CI/CD,<br>
                             and version control.
                         </p>
@@ -578,12 +190,21 @@
                 <div class="border border-b-[#1A1A1A] mq-319:flex mq-319:flex-col mq-869:grid mq-869:grid-cols-[56%_auto]">
 
                     <!-- FIRST BLOCK (MAP SESSION) -->
-                    <div class="flex flex-col mq-319:pt-0 mq-319:gap-2.5 mq-319:border-r-0 mq-319:mb-16 mq-869:border mq-869:border-r-[#1A1A1A] mq-869:pt-5 mq-869:gap-10">
+                    <div class="font-SF-Pro-Display flex flex-col mq-319:pt-0 mq-319:gap-2.5 mq-319:border-r-0 mq-319:mb-0 mq-869:border mq-869:border-r-[#1A1A1A] mq-869:pt-5 mq-869:gap-10">
                         <div class="flex flex-col gap-3.5">
-                            <h2 class="text-white text-balance leading-[1.1] tracking-[-1%] mq-319:text-[34px] mq-319:w-full mq-869:w-[70%] mq-869:text-5xl">Your Devices. One Unified View.</h2>
-                            <p class="text-[#CCC] leading-[150%] mq-319:text-sm mq-319:w-[85%] mq-869:text-[20px] mq-640:w-[500px] mq-869:w-[60%] mq-1200:w-[570px]">Map-Based Fleet Overview — Track globally distributed devices tagged by region and status</p>
+                            <h2 data-aos="fade-up" data-aos-delay="0" class="text-white text-balance leading-[1.1] tracking-[-1%] mq-319:text-[34px] mq-319:w-full mq-869:w-[70%] mq-869:text-5xl">Your Devices. One Unified View.</h2>
+                            <p data-aos="fade-up" data-aos-delay="0" class="text-[#A9A9A9] leading-[150%] mq-319:text-sm mq-319:w-[85%] mq-869:text-[20px] mq-640:w-[500px] mq-869:w-[60%] mq-1200:w-[570px]">Map-Based Fleet Overview — Track globally distributed devices tagged by region and status</p>
                         </div>
-                        <img class="w-full border" src="assets/img/map-session-img.svg" alt="World map image">
+                        <lottie-player
+                            src="assets/animations/Your Devices One Unified View.json"
+                            background="transparent"
+                            speed="1"
+                            class="w-full"
+                            loop
+                            autoplay
+                            data-aos="fade-up" data-aos-delay="200"
+                            >
+                        </lottie-player>
                     </div>
                     <!-- SECURITY & COMPLIANCE -->
                     <div class="flex flex-col gap-6 mq-319:pt-[50px] mq-319:border mq-319:border-t-[#222] mq-869:border-0 mq-869:pt-0">
@@ -593,32 +214,72 @@
 
                         <div class="flex flex-col gap-10 mq-319:pb-16 mq-869:pt-5 mq-869:pl-11">
                             <!-- RADIAL ICON AND TEXTS -->
-                            <div class="flex flex-col items-baseline gap-3">
-                                <img class="mq-319:w-[40px] mq-319:mb-[-10px] mq-1200:w-[60px]" src="assets/icons/radial-icon.svg" alt="Compliance Icon" class="w-8 h-8">
-                                <h2 class="text-white leading-[1.1] tracking-[-1%] mq-319:text-[34px] mq-319:w-full mq-869:w-[70%] mq-869:text-5xl">Security & Compliance</h2>
-                                <p class="text-[#A9A9A9] leading-[130%] mq-319:text-sm mq-319:w-[85%] mq-869:text-[20px] mq-640:w-[500px] mq-869:w-[60%] mq-1200:text-[26px] mq-1200:w-[476px]">View vulnerabilities, update compliance, and offline device alerts.</p>      
+                            <div class="font-SF-Pro-Display flex flex-col items-baseline gap-3">
+                                <lottie-player
+                                    src="assets/animations/Security - Icon.json"
+                                    background="transparent"
+                                    speed="1"
+                                    class="mq-319:w-[40px] mq-319:h-[60px] mq-319:mb-[-10px] mq-1200:w-[60px] mq-1200:h-[60px]"
+                                    loop
+                                    autoplay
+                                    data-aos="fade-up" data-aos-delay="200"
+                                    >
+                                </lottie-player>
+                                <!--<img class="mq-319:w-[40px] mq-319:mb-[-10px] mq-1200:w-[60px]" src="assets/icons/radial-icon.svg" alt="Compliance Icon" class="w-8 h-8">-->
+                                <h2 data-aos="fade-up" data-aos-delay="200" class="text-white leading-[1.1] tracking-[-1%] mq-319:text-[34px] mq-319:w-full mq-869:w-[70%] mq-869:text-5xl">Security & Compliance</h2>
+                                <p data-aos="fade-up" data-aos-delay="200" class="text-[#A9A9A9] leading-[130%] mq-319:text-sm mq-319:w-[85%] mq-869:text-[20px] mq-640:w-[500px] mq-869:w-[60%] mq-1200:w-[476px]">View vulnerabilities, update compliance, and offline device alerts.</p>      
                             </div>
                             <!-- STATISTICS IMAGE (COMPLIANCE OVERVIEW)-->
                             <div class="flex justify-center mq-869:justify-start">
-                                <img class="w-[459px]" src="assets/img/high-level-stats.svg" alt="Stats image with porcentage and visual graphics">
+                                <lottie-player
+                                    src="assets/animations/Security & Compliance.json"
+                                    background="transparent"
+                                    speed="1"
+                                    class="mq-319:w-[76%] lg:w-[92%]"
+                                    loop
+                                    autoplay
+                                    data-aos="fade-right" data-aos-delay="400"
+                                    >
+                                </lottie-player>
+                                <!--<img class="w-[459px]" src="assets/img/high-level-stats.svg" alt="Stats image with porcentage and visual graphics">-->
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- PERFORMANCE ANALYTICS -->
-                <div class="gap-8 mq-319:pt-[50px] mq-319:border mq-319:border-t-[#222] mq-319:flex mq-319:flex-col mq-869:flex mq-869:pt-0 mq-869:flex-row">
+                <div class="mq-319:pt-[50px] mq-319:border mq-319:border-t-[#222] mq-319:flex mq-319:flex-col mq-869:flex mq-869:pt-0 mq-869:flex-row">
                     <!-- GREEN TOP ICON -->
-                    <div class="flex flex-col items-start gap-3 mq-319:p-0 mq-319:w-full mq-869:w-[30%] mq-869:pt-[74px]">
-                        <img class="mq-319:w-[40px] mq-1200:w-[60px]" src="assets/icons/analysis-text-link.svg" alt="Green statistic icon">
-                        <h2 class="text-white leading-[1.1] tracking-[-1%] mq-319:text-[34px] mq-319:w-full mq-869:w-[70%] mq-869:text-5xl">Performance Analytics</h2>
-                        <p class="text-[#CCC] leading-[150%] mq-319:text-sm mq-319:w-[85%] mq-869:text-xl mq-640:w-[500px] mq-869:w-[344px]"> Monitor resource usage, container versions, and connectivity health.</p>                      
+                    <div class="font-SF-Pro-Display flex flex-col items-start gap-3 mq-319:p-0 mq-319:w-full mq-869:w-[30%] mq-869:pt-[74px]">
+                            <lottie-player
+                                src="assets/animations/Performance.json"
+                                background="transparent"
+                                speed="1"
+                                class="mq-319:w-[40px] mq-319:h-[60px] mq-1200:w-[60px] mq-1200:h-[60px]"
+                                loop
+                                autoplay
+                                data-aos="fade-up" data-aos-delay="200"
+                                >
+                            </lottie-player>
+                        <!--<img class="mq-319:w-[40px] mq-1200:w-[60px]" src="assets/icons/analysis-text-link.svg" alt="Green statistic icon">-->
+                        <h2 data-aos="fade-up" data-aos-delay="200" class="text-white leading-[1.1] tracking-[-1%] mq-319:text-[34px] mq-319:w-full mq-869:w-[70%] mq-869:text-5xl">Performance Analytics</h2>
+                        <p data-aos="fade-up" data-aos-delay="200" class="text-[#A9A9A9] leading-[150%] mq-319:text-sm mq-319:w-[85%] mq-869:text-[20px] mq-640:w-[500px] mq-869:w-[344px]"> Monitor resource usage, container versions, and connectivity health.</p>                      
                     </div>
                     <!-- IMAGE WITH DATA -->
                     <div class="flex gap-8 mq-869:translate-y-[28px] mq-1200:mt-[-46px]">
-                        <img class="w-[756px]" src="assets/img/group-double-card.svg" alt="Statistics illustrative image">
+                        <lottie-player
+                            src="assets/animations/Performance Analytics Card.json"
+                            background="transparent"
+                            speed="1"
+                            class="w-full pr-3.5"
+                            loop
+                            autoplay
+                            data-aos="fade-left" data-aos-delay="400"
+                            >
+                        </lottie-player>
+                        <!--<img class="w-[756px]" src="assets/img/group-double-card.svg" alt="Statistics illustrative image">-->
                     </div>
-                    <div class="w-[40px] h-[416px] border border-l-[#222] mq-319:hidden mq-1200:block"></div>
+                    <div data-aos="fade-left" data-aos-delay="400" class="w-[8%] h-[416px] border border-l-[#222] mq-319:hidden mq-1200:block"></div>
                 </div>
             </section>
 
@@ -626,269 +287,495 @@
             <section class="w-full mx-auto flex flex-col mt-44">
                 
                 <!-- TITLES -->
-                <section class="flex flex-col gap-[22px] mq-319:px-[18px] mq-869:px-0">
-                    <span class="flex text-white self-center border border-[#595959] px-6 py-1 bg-[#121212] rounded-full text-base font-display mb-[-6px] mq-319:text-xs mq-869:text-[16px]">Testimonials</span>
+                <section class="font-SF-Pro-Display  flex flex-col gap-[22px] mq-319:px-[18px] mq-869:px-0">
+                    <span data-aos="fade-up" data-aos-delay="0" class="flex text-white self-center border border-[#595959] px-6 py-1 bg-[#121212] rounded-full text-base font-SF-Pro-Display mb-[-6px] mq-319:text-xs mq-869:text-[16px]">Testimonials</span>
                     
-                    <h2 class="text-white text-center self-center leading-[120%] tracking-[-1%] font-medium mq-319:w-full mq-319:text-[34px] mq-580:w-[550px] mq-869:text-5xl mq-869:w-[752px]">Trusted by Teams Who Power Real-World Deployments</h2>
-                    <p class="text-[#CCC] text-[20px] text-center self-center mq-319:text-sm mq-319:w-[100%] mq-869:text-[20px] mq-640:w-[540px] mq-869:w-[736px]">From smart cities to remote edge devices, Admiral helps engineers and ops teams monitor, deploy, and scale with confidence.</p>
+                    <h2 data-aos="fade-up" data-aos-delay="0" class="text-white text-center self-center leading-[120%] tracking-[-1%] font-medium mq-319:w-full mq-319:text-[34px] mq-580:w-[550px] mq-869:text-5xl mq-869:w-[752px]">Trusted by Teams Who Power Real-World Deployments</h2>
+                    <p data-aos="fade-up" data-aos-delay="0" class="text-[#CCC] text-[20px] text-center self-center mq-319:text-sm mq-319:w-[100%] mq-869:text-[20px] mq-640:w-[540px] mq-869:w-[736px]">From smart cities to remote edge devices, Admiral helps engineers and ops teams monitor, deploy, and scale with confidence.</p>
                 </section>
 
                 <!-- COMMENTS CONTAINER -->
-                <section class="relative">
-                    <!-- LEFT GRADIENT (COMMENTS FADING AWAY) absolute, top242rem height490px -->
+                <section data-aos="fade-up" data-aos-delay="0" class="relative">
+                    <!-- LEFT GRADIENT (COMMENTS FADING AWAY) -->
                     <div class=" pointer-events-none absolute h-full left-0 top-0 mq-319:w-[10%] mq-869:w-[400px] z-10 bg-gradient-to-r from-black/80 to-transparent"></div>
                     <!-- RIGHT GRADIENT (COMMENTS FADING AWAY) -->
                     <div class=" pointer-events-none absolute h-full right-0 top-0 mq-319:w-[10%] mq-869:w-[400px] z-10 bg-gradient-to-l from-black/80 to-transparent"></div>
                     
                     <!-- COMMENTS SCROLL -->
-                    <section class="comments-scrollbar flex gap-4 mt-9 overflow-x-auto pb-4 px-10 scroll-container" id="comments-section-block">
-
-                        <!-- COLUMN DOUBLE COMMENTS -->
-                        <section class="flex flex-col gap-4">
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
-                                        </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
-                                    </div>
-                                    <img class="h-[21px] w-[61px]" src="assets/img/motive.svg" alt="motive logo">
-                                </div>
+                    <section class="width-scrollbar flex gap-4 mt-9 overflow-x-auto pb-4 px-4 scroll-container">
+                        <!-- CARROUSEL BLOCK -->
+                        <section class="gap-4 animate-marquee"> 
+                            <!--/* FIRST SECTION COMMENTS (ORIGINAL ONES) */-->
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
-                                </p>
-                            </article>
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
                                         </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
+                                        <img class="h-[21px] w-[61px]" src="assets/img/motive.svg" alt="motive logo">
                                     </div>
-                                    <img class="h-[21px] w-[61px]" src="assets/img/motive.svg" alt="motive logo">
-                                </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
+                                    </p>
+                                </article>
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
-                                </p>
-                            </article>
-                        </section>
-
-                        <!-- COLUMN DOUBLE COMMENTS -->
-                        <section class="flex flex-col gap-4">
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
                                         </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
+                                        <img class="h-[21px] w-[61px]" src="assets/img/motive.svg" alt="motive logo">
                                     </div>
-                                    <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
-                                </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
+                                    </p>
+                                </article>
+                            </section>
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
-                                </p>
-                            </article>
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
                                         </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
+                                        <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
                                     </div>
-                                    <img class="h-[21px] w-[61px]" src="assets/img/bitpanda.svg" alt="">
-                                </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
+                                    </p>
+                                </article>
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
-                                </p>
-                            </article>
-                        </section>
-
-                        <!-- COLUMN DOUBLE COMMENTS -->
-                        <section class="flex flex-col gap-4">
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl w-full h-full object-cover" src="assets/img/profile-comments-1.jpg" alt="Profile image">
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
                                         </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Emery</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">DevOps Lead, SmartCity Solutions</span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
+                                        <img class="h-[21px] w-[61px]" src="assets/img/bitpanda.svg" alt="bitpanda logo">
                                     </div>
-                                    <img class="" src="" alt="">
-                                </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
+                                    </p>
+                                </article>
+                            </section>
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    “The alert system saved us from major outages. Admiral’s live insights are critical.”    
-                                </p>
-                            </article>
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl w-full h-full object-cover" src="assets/img/profile-comments-1.jpg" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Emery</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">DevOps Lead, SmartCity Solutions</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
                                         </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
+                                        <img class="" src="" alt="">
                                     </div>
-                                    <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
-                                </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “The alert system saved us from major outages. Admiral’s live insights are critical.”    
+                                    </p>
+                                </article>
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
-                                </p>
-                            </article>
-                        </section>
-
-                        <!-- COLUMN DOUBLE COMMENTS -->
-                        <section class="flex flex-col gap-4">
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
                                         </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
+                                        <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
                                     </div>
-                                    <img class="h-[21px] w-[61px]" src="assets/img/bitpanda.svg" alt="bitpanda logo">
-                                </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
+                                    </p>
+                                </article>
+                            </section>
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
-                                </p>
-                            </article>
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
                                         </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
+                                        <img class="h-[21px] w-[61px]" src="assets/img/bitpanda.svg" alt="bitpanda logo">
                                     </div>
-                                    <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
-                                </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
+                                    </p>
+                                </article>
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
-                                </p>
-                            </article>
-                        </section>
-
-                        <!-- COLUMN DOUBLE COMMENTS -->
-                        <section class="flex flex-col gap-4">
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
                                         </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
+                                        <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
                                     </div>
-                                    <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
-                                </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
+                                    </p>
+                                </article>
+                            </section>
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
-                                </p>
-                            </article>
-                            <!-- COMMENT -->
-                            <article class="flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
-                                <!-- PROFILE IMG N' TITLES -->
-                                <div class="flex items-center justify-between">
-                                    <div class="flex">
-                                        <div class="w-12 h-12">
-                                            <img class="rounded-xl w-full h-full object-cover" src="assets/img/profile-comments-1.jpg" alt="Profile image">
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
                                         </div>
-                                        <div class="flex flex-col gap-1 ml-3 justify-center">
-                                            <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Emery</span>
-                                            <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">DevOps Lead, SmartCity Solutions</span>
-                                        </div>
-                                    <!-- COMPANY / LOGO IMG -->
+                                        <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
                                     </div>
-                                    <img class="" src="" alt="">
-                                </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
+                                    </p>
+                                </article>
                                 <!-- COMMENT -->
-                                <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
-                                    “The alert system saved us from major outages. Admiral’s live insights are critical.”    
-                                </p>
-                            </article>
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl w-full h-full object-cover" src="assets/img/profile-comments-1.jpg" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Emery</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">DevOps Lead, SmartCity Solutions</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="" src="" alt="">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “The alert system saved us from major outages. Admiral’s live insights are critical.”    
+                                    </p>
+                                </article>
+                            </section>
+                            
+                            <!--/* SECOND SECTION COMMENTS (COPIES FROM HERE) */-->
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="h-[21px] w-[61px]" src="assets/img/motive.svg" alt="motive logo">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
+                                    </p>
+                                </article>
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="h-[21px] w-[61px]" src="assets/img/motive.svg" alt="motive logo">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
+                                    </p>
+                                </article>
+                            </section>
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
+                                    </p>
+                                </article>
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="h-[21px] w-[61px]" src="assets/img/bitpanda.svg" alt="bitpanda logo">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
+                                    </p>
+                                </article>
+                            </section>
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl w-full h-full object-cover" src="assets/img/profile-comments-1.jpg" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Emery</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">DevOps Lead, SmartCity Solutions</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="" src="" alt="">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “The alert system saved us from major outages. Admiral’s live insights are critical.”    
+                                    </p>
+                                </article>
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
+                                    </p>
+                                </article>
+                            </section>
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-3.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Christian Trummer</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">VP of Engineering, CargoLink </span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="h-[21px] w-[61px]" src="assets/img/bitpanda.svg" alt="bitpanda logo">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “Admiral powers our nationwide logistics network with real-time monitoring and seamless deployment capabilities.
+                                    </p>
+                                </article>
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
+                                    </p>
+                                </article>
+                            </section>
+                            <!-- COLUMN DOUBLE COMMENTS -->
+                            <section class="flex flex-col gap-4">
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl" src="assets/img/profile-comments-2.png" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Paul Guthrie</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">CTO, RetailFleet Inc.</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="h-[21px] w-[61px]" src="assets/img/blend.svg" alt="blenc logo">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        From deployment to diagnostics, Admiral has transformed how we operate — offering real-time visibility, granular control, and unmatched reliability across all our distributed energy sites    
+                                    </p>
+                                </article>
+                                <!-- COMMENT -->
+                                <article class="font-SF-Pro-Display flex flex-col gap-6 rounded-[12px] bg-[#0D0D0D] mq-319:w-[290px] mq-319:p-4 mq-869:p-5 mq-869:w-[384px]">
+                                    <!-- PROFILE IMG N' TITLES -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex">
+                                            <div class="w-12 h-12">
+                                                <img class="rounded-xl w-full h-full object-cover" src="assets/img/profile-comments-1.jpg" alt="Profile image">
+                                            </div>
+                                            <div class="flex flex-col gap-1 ml-3 justify-center">
+                                                <span class="text-white leading-[120%] mq-319:text-[16px] mq-869:text-lg">Emery</span>
+                                                <span class="text-[#B6B6B6] leading-[140%] mq-319:text-xs mq-869:text-sm">DevOps Lead, SmartCity Solutions</span>
+                                            </div>
+                                        <!-- COMPANY / LOGO IMG -->
+                                        </div>
+                                        <img class="" src="" alt="">
+                                    </div>
+                                    <!-- COMMENT -->
+                                    <p class="text-[#CFCFCF] leading-[150%] mq-319:text-sm mq-869:text-lg">
+                                        “The alert system saved us from major outages. Admiral’s live insights are critical.”    
+                                    </p>
+                                </article>
+                            </section>
                         </section>
                     </section>
                 </section>
 
-                <button class="flex self-center h-14 w-[219px] bg-[linear-gradient(to_right,_#fff,_#555)] border-none rounded-[50px] p-[1px] mt-9">
-                    <a href="" class="text-white text-lg w-full h-full flex justify-center items-center bg-[#0B0B0B] rounded-[50px]">View All</a>
+                <button class="font-SF-Pro-Display flex self-center h-14 w-[219px] bg-[linear-gradient(to_right,_#fff,_#555)] border-none rounded-[50px] p-[1px] mt-9">
+                    <a href="" class="text-white text-lg w-full h-full flex justify-center items-center bg-[#0B0B0B] rounded-[50px] transition duration-300 ease-in-out lg:hover:bg-[#000000c9]">View All</a>
                 </button>
             </section>
 
             <!-- LAUNCH SMATER SECTION -->
-            <section class="w-full mx-auto flex flex-col mt-44 gap-5 border border-t-[#242424] py-40 mq-319:px-[26px]">
-                <h2 class="text-white text-center self-center font-medium leading-[120%] mq-319:text-[40px] mq-538:w-[500px] mq-869:w-[740px] mq-869:text-[64px]">Launch Smarter Rollouts with Admiral</h2>
-                <section class="flex justify-center gap-6 mt-6">
-                    <button class="h-14 w-full sm:w-[219px] bg-[#2156E9] border-none p-[1px] rounded-[50px] mq-319:w-[50%] mq-319:h-[50px] lg:h-[56px]">
-                        <a href="" class="text-white text-lg w-full h-full flex justify-center items-center border-[#2156E9] rounded-[50px] mq-319:text-[16px] lg:text-lg">Start for Free</a>
+            <section data-aos="fade-up" data-aos-delay="0" class="font-SF-Pro-Display w-full mx-auto flex flex-col mt-44 gap-5 border border-t-darkgray py-40 mq-319:px-[26px] bg-[linear-gradient(360deg,_#0E0E0E,_#1C1C1C)]">
+                <h2 data-aos="fade-up" data-aos-delay="0" class="text-white text-center self-center font-medium leading-[120%] mq-319:text-[40px] mq-538:w-[500px] mq-869:w-[740px] mq-869:text-[64px]">Launch Smarter Rollouts with Admiral</h2>
+                <section data-aos="fade-up" data-aos-delay="0" class="flex justify-center gap-6 mt-6">
+                    <button class="h-14 w-full sm:w-[219px] bg-blue border-none p-[1px] rounded-[50px] mq-319:w-[50%] mq-319:h-[50px] lg:h-[56px] group transition duration-300 ease-in-out lg:hover:bg-[#4954F1]">
+                        <a href="" class="text-white text-lg w-full h-full flex justify-center items-center border-blue rounded-[50px] mq-319:text-[16px] lg:text-lg lg:hover:border-[#4954F1]">Start for Free</a>
                     </button>
                     <button class="mq-319:w-[50%] mq-319:h-[50px] h-14 w-full sm:w-[219px] bg-[linear-gradient(to_right,_#fff,_#555)] border-none rounded-[50px] p-[1px] lg:h-[56px]">
-                        <a href="" class="text-white text-lg w-full h-full flex justify-center items-center bg-[#0B0B0B] rounded-[50px] mq-319:text-[16px] lg:text-lg">Watch Demo</a>
+                        <a href="" class="text-white text-lg w-full h-full flex justify-center items-center bg-[#0B0B0B] rounded-[50px] mq-319:text-[16px] lg:text-lg transition duration-300 ease-in-out lg:hover:bg-[#000000c9]">Watch Demo</a>
                     </button>
                 </section>
             </section>
@@ -896,93 +783,93 @@
             <section class="flex flex-col gap-10 items-center justify-center self-center mt-44 mq-319:w-full mq-319:px-[18px] mq-640:px-8 mq-1000:w-[1008px]">
                 
                 <!-- FAQS SECTION-->
-                <section class="flex flex-col gap-[22px] text-white">
-                    <span class="flex text-white self-center border border-[#595959] px-6 py-1 bg-[#121212] rounded-full text-base font-display mb-[-6px] mq-319:text-xs mq-869:text-[16px]">FAQs</span>
+                <section class="font-SF-Pro-Display flex flex-col gap-[22px] text-white">
+                    <span data-aos="fade-up" data-aos-delay="0" class="flex text-white self-center border border-[#595959] px-6 py-1 bg-[#121212] rounded-full text-base font-SF-Pro-Display mb-[-6px] mq-319:text-xs mq-869:text-[16px]">FAQs</span>
                     
-                    <h2 class="text-white text-center self-center leading-[120%] tracking-[-1%] font-medium mq-319:w-full mq-319:text-[34px] mq-484:w-[480px] mq-869:w-[686px] mq-869:text-5xl">Everything You Need to Know. All in One Place</h2>
-                    <p class="text-[#CCC] text-[20px] text-center self-center mq-319:text-sm mq-319:w-[100%] mq-869:text-[20px] mq-484:w-[420px] mq-640:w-[604px] mq-1200:w-[760px]">Quick answers to common questions about Admiral&apos;s capabilities, deployment, and integrations.</p>
+                    <h2 data-aos="fade-up" data-aos-delay="0" class="text-white text-center self-center leading-[120%] tracking-[-1%] font-medium mq-319:w-full mq-319:text-[34px] mq-484:w-[480px] mq-869:w-[686px] mq-869:text-5xl">Everything You Need to Know. All in One Place</h2>
+                    <p data-aos="fade-up" data-aos-delay="0" class="text-[#CCC] text-[20px] text-center self-center mq-319:text-sm mq-319:w-[100%] mq-869:text-[20px] mq-484:w-[420px] mq-640:w-[604px] mq-1200:w-[760px]">Quick answers to common questions about Admiral&apos;s capabilities, deployment, and integrations.</p>
                 </section>
                 
                 <!-- QUESTIONS BLOCK -->
                 <section class="flex flex-col justify-center gap-6 w-full]">
                     <!-- QUESTION ONE -->
-                    <div class="flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block">
+                    <div data-aos="fade-up" data-aos-delay="0" class="font-SF-Pro-Display flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block transition duration-300 ease-in-out lg:hover:bg-[#1a1a1a]">
                         <div class="flex justify-between relative">
                             <p class="text-white mq-319:text-[16px] mq-319:w-[86%] mq-869:w-full mq-869:text-2xl">What type of devices does Admiral support?</p>
-                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-full" src="assets/icons/plus-icon.svg" alt="Plus icon image">
                             </button>
                             <!-- ON CLICKS ALTERNATES WITH " - " ICON -->
-                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-8" src="assets/icons/less-icon.svg" alt="Rest icon image">
                             </button>
                         </div>
                         <p class="text-[#CECECF] mq-319:text-sm mq-869:text-[20px] mq-869:w-[92%] answer">Absolutely. You can choose between our secure cloud-hosted service or deploy Admiral on your own infrastructure.</p>
                     </div>
                     <!-- QUESTION TWO -->
-                    <div class="flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block">
+                    <div data-aos="fade-up" data-aos-delay="0" class="font-SF-Pro-Display flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block transition duration-300 ease-in-out lg:hover:bg-[#1a1a1a]">
                         <div class="flex justify-between relative">
                             <p class="text-white mq-319:text-[16px] mq-319:w-[86%] mq-869:w-full mq-869:text-2xl">Can Admiral integrate with our CI/CD pipeline?</p>
-                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-full" src="assets/icons/plus-icon.svg" alt="Plus icon image">
                             </button>
                             <!-- ON CLICKS ALTERNATES WITH " - " ICON -->
-                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-8" src="assets/icons/less-icon.svg" alt="Rest icon image">
                             </button></div>
                         <p class="text-[#CECECF] mq-319:text-sm mq-869:text-[20px] mq-869:w-[92%] answer">Absolutely. You can choose between our secure cloud-hosted service or deploy Admiral on your own infrastructure.</p>
                     </div>
                     <!-- QUESTION THREE -->
-                    <div class="flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block">
+                    <div data-aos="fade-up" data-aos-delay="0" class="font-SF-Pro-Display flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block transition duration-300 ease-in-out lg:hover:bg-[#1a1a1a]">
                         <div class="flex justify-between relative">
                             <p class="text-white mq-319:text-[16px] mq-319:w-[86%] mq-869:w-full mq-869:text-2xl">What type of devices does Admiral support?</p>
-                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-full" src="assets/icons/plus-icon.svg" alt="Plus icon image">
                             </button>
                             <!-- ON CLICKS ALTERNATES WITH " - " ICON -->
-                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-8" src="assets/icons/less-icon.svg" alt="Rest icon image">
                             </button> 
                         </div>
                         <p class="text-[#CECECF] mq-319:text-sm mq-869:text-[20px] mq-869:w-[92%] answer">Absolutely. You can choose between our secure cloud-hosted service or deploy Admiral on your own infrastructure.</p>
                     </div>
                     <!-- QUESTION FOUR -->
-                    <div class="flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block">
+                    <div data-aos="fade-up" data-aos-delay="0" class="font-SF-Pro-Display flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block transition duration-300 ease-in-out lg:hover:bg-[#1a1a1a]">
                         <div class="flex justify-between relative">
                             <p class="text-white mq-319:text-[16px] mq-319:w-[86%] mq-869:w-full mq-869:text-2xl">What type of devices does Admiral support?</p>
-                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-full" src="assets/icons/plus-icon.svg" alt="Plus icon image">
                             </button>
                             <!-- ON CLICKS ALTERNATES WITH " - " ICON -->
-                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-8" src="assets/icons/less-icon.svg" alt="Rest icon image">
                             </button>
                         </div>
                         <p class="text-[#CECECF] mq-319:text-sm mq-869:text-[20px] mq-869:w-[92%] answer">Absolutely. You can choose between our secure cloud-hosted service or deploy Admiral on your own infrastructure.</p>
                     </div>
                     <!-- QUESTION FIVE -->
-                    <div class="flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block">
+                    <div data-aos="fade-up" data-aos-delay="0" class="font-SF-Pro-Display flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block transition duration-300 ease-in-out lg:hover:bg-[#1a1a1a]">
                         <div class="flex justify-between relative">
                             <p class="text-white mq-319:text-[16px] mq-319:w-[86%] mq-869:w-full mq-869:text-2xl">What type of devices does Admiral support?</p>
-                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-full" src="assets/icons/plus-icon.svg" alt="Plus icon image">
                             </button>
                             <!-- ON CLICKS ALTERNATES WITH " - " ICON -->
-                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-8" src="assets/icons/less-icon.svg" alt="Rest icon image">
                             </button>
                         </div>
                         <p class="text-[#CECECF] mq-319:text-sm mq-869:text-[20px] mq-869:w-[92%] answer">Absolutely. You can choose between our secure cloud-hosted service or deploy Admiral on your own infrastructure.</p>
                     </div>
                     <!-- QUESTION SIX -->
-                    <div class="flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block">
+                    <div data-aos="fade-up" data-aos-delay="0" class="font-SF-Pro-Display flex flex-col rounded-3xl border border-[#2B2B2E] bg-[#0B0C0D] w-full mq-319:p-[18px] mq-869:p-8 faqs-block transition duration-300 ease-in-out lg:hover:bg-[#1a1a1a]">
                         <div class="flex justify-between relative">
                             <p class="text-white mq-319:text-[16px] mq-319:w-[86%] mq-869:w-full mq-869:text-2xl">What type of devices does Admiral support?</p>
-                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 plus-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-full" src="assets/icons/plus-icon.svg" alt="Plus icon image">
                             </button>
                             <!-- ON CLICKS ALTERNATES WITH " - " ICON -->
-                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer">
+                            <button class="w-8 less-icon absolute top-0 right-0 cursor-pointer transform lg:hover:scale-[1.1]">
                                 <img class="w-8" src="assets/icons/less-icon.svg" alt="Rest icon image">
                             </button>
                         </div>
@@ -993,47 +880,51 @@
         </main>
         
         <!-- FOOTER SECTION -->
-        <footer class="flex flex-col w-full mt-44 justify-center mq-319:px-[18px] mq-640:px-8">
-            <section class="flex gap-10 items-start justify-between self-center w-full mb-10 mq-319:flex-col mq-319:p-0 mq-869:py-14 mq-869:flex-row mq-869:px-0 mq-1200:px-[12%]">
+        <footer class="flex flex-col w-full mt-44 justify-center">
+            <section class="flex gap-16 items-start justify-between self-center w-full mb-10 mq-319:flex-col mq-319:p-0 mq-319:px-[18px] mq-640:px-[4%] mq-869:py-14 mq-869:flex-row mq-869:px-8 mq-1024:px-[2%] mq-1200:px-[12%]">
                
                 <!-- LOGO SECTION, TEXT N' INPUT -->
-                <section class="flex flex-col gap-8 mq-319:w-full mq-869:w-[488px]">
-                    <img class="mq-319:w-[100px] mq-869:w-[137px]" src="assets/img/admiral-qdynamics-logo.svg" alt="Admiral logo image">
-                    <p class="text-[#B2B2B2] mq-319:text-[16px] mq-484:w-[450px] mq-869:text-[20px] leading-[150%]">Explore resources, connect with our team, and stay informed with the latest updates from Admiral.</p>
+                <section class="font-SF-Pro-Display flex flex-col gap-6 mq-319:w-full mq-869:w-[488px]">
+                    <img data-aos="fade-up" data-aos-delay="0" class="mq-319:w-[100px] mq-869:w-[137px]" src="assets/img/admiral-qdynamics-logo.svg" alt="Admiral logo image">
+                    <p data-aos="fade-up" data-aos-delay="0" class="text-[#B2B2B2] mq-319:text-[16px] mq-484:w-[450px] mq-869:text-[20px] leading-[150%]">Explore resources, connect with our team, and stay informed with the latest updates from Admiral.</p>
                     <!-- INPUT BLOCK -->
-                    <div class="flex p-2 justify-between items-center border border-[#242424] rounded-[100px] bg-[#0C0C0C] mq-319:mt-[-10px] mq-319:h-[44px] mq-319:pl-[16px] mq-484:w-[450px] mq-869:mt-2.5 mq-869:h-auto mq-869:pl-6">
-                        <input class="border-none bg-transparent text-white mq-319:text-[14px] mq-869:text-[20px] outline-none w-[65%]" type="email" placeholder="Email Address">
-                        <span class="bg-[#242424] text-white rounded-[100px] mq-319:text-[12px] mq-319:h-[30px] mq-319:py-[5px] mq-319:px-2.5 mq-869:py-2.5 mq-869:px-4 mq-319:text-nowrap mq-869:text-wrap mq-869:text-lg mq-869:h-full cursor-pointer">Stay Updated</span>
+                    <div data-aos="fade-up" data-aos-delay="0" class="flex p-2 justify-between items-center border border-darkgray rounded-[100px] bg-[#0C0C0C] mq-319:mt-[-10px] mq-319:h-[44px] mq-319:pl-[16px] mq-484:w-[450px] mq-869:w-full mq-869:mt-2.5 mq-869:h-auto mq-869:pl-6">
+                        <input class="border-none bg-transparent text-white mq-319:text-sm mq-869:text-[20px] outline-none w-[65%]" type="email" placeholder="Email Address">
+                        <span class="bg-darkgray text-white rounded-[100px] mq-319:text-sm mq-319:h-[30px] mq-319:py-[5px] mq-319:px-2.5 mq-869:py-2 mq-869:px-4 mq-319:text-nowrap mq-869:text-wrap mq-869:text-lg mq-869:h-full cursor-pointer transition duration-300 ease-in-out lg:hover:bg-[#333]">Stay Updated</span>
                     </div>
                 </section>
-                <!-- GROUP LINKS -->
-                <section class="flex flex-col gap-8">
-                    <h4 class="text-white mq-319:text-[16px] mq-869:text-[20px]">Navigation</h4>
-                    <ul class="flex flex-col mq-319:text-[16px] mq-319:gap-2.5 mq-869:text-[20px] mq-869:gap-3">
-                        <li><a href="" class="text-[#B2B2B2]">Platform</a></li>
-                        <li><a href="" class="text-[#B2B2B2]">About Us</a></li>
-                        <li><a href="" class="text-[#B2B2B2]">API Docs</a></li>
-                        <li><a href="" class="text-[#B2B2B2]">Blog</a></li>
-                        <li><a href="" class="text-[#B2B2B2]">Contact</a></li>
-                    </ul>
-                </section>
-                <!-- GROUP LINKS -->
-                <section class="flex flex-col gap-8">
-                    <h4 class="text-white mq-319:text-[16px] mq-869:text-[20px]">Social Media</h4>
-                    <ul class="flex flex-col mq-319:text-[16px] mq-319:gap-2.5 mq-869:text-[20px] mq-869:gap-3">
-                        <li><a href="" class="text-[#B2B2B2]">Linkedin</a></li>
-                        <li><a href="" class="text-[#B2B2B2]">Instagram</a></li>
-                        <li><a href="" class="text-[#B2B2B2]">Youtube</a></li>
-                    </ul>
+                <!-- GROUP LINKS SECTION -->
+                <section class="flex gap-20 mq-869:w-[36%] mq-869:justify-between"> 
+                    <!-- GROUP LINKS -->
+                    <section class="font-SF-Pro-Display flex flex-col gap-6">
+                        <h4 data-aos="fade-up" data-aos-delay="0" class="text-white mq-319:text-[16px] mq-869:text-[20px]">Navigation</h4>
+                        <ul class="flex flex-col mq-319:text-[16px] mq-319:gap-2.5 mq-869:text-[20px] mq-869:gap-3">
+                            <li><a href="" data-aos="fade-up" data-aos-delay="0" class="text-[#B2B2B2] transition duration-300 ease-in-out lg:hover:text-white">Platform</a></li>
+                            <li><a href="" data-aos="fade-up" data-aos-delay="0" class="text-[#B2B2B2] transition duration-300 ease-in-out lg:hover:text-white">About Us</a></li>
+                            <li><a href="" data-aos="fade-up" data-aos-delay="0" class="text-[#B2B2B2] transition duration-300 ease-in-out lg:hover:text-white">API Docs</a></li>
+                            <li><a href="" data-aos="fade-up" data-aos-delay="0" class="text-[#B2B2B2] transition duration-300 ease-in-out lg:hover:text-white">Blog</a></li>
+                            <li><a href="" data-aos="fade-up" data-aos-delay="0" class="text-[#B2B2B2] transition duration-300 ease-in-out lg:hover:text-white">Contact</a></li>
+                        </ul>
+                    </section>
+                    <!-- GROUP LINKS -->
+                    <section class="font-SF-Pro-Display flex flex-col gap-6">
+                        <h4 data-aos="fade-up" data-aos-delay="0" class="text-white mq-319:text-[16px] mq-869:text-[20px]">Social Media</h4>
+                        <ul class="flex flex-col mq-319:text-[16px] mq-319:gap-2.5 mq-869:text-[20px] mq-869:gap-3">
+                            <li><a href="" data-aos="fade-up" data-aos-delay="0" class="text-[#B2B2B2] transition duration-300 ease-in-out lg:hover:text-white">Linkedin</a></li>
+                            <li><a href="" data-aos="fade-up" data-aos-delay="0" class="text-[#B2B2B2] transition duration-300 ease-in-out lg:hover:text-white">Instagram</a></li>
+                            <li><a href="" data-aos="fade-up" data-aos-delay="0" class="text-[#B2B2B2] transition duration-300 ease-in-out lg:hover:text-white">Youtube</a></li>
+                        </ul>
+                    </section>
                 </section>
             </section>
 
-            <section class="w-full py-12 border border-t-[#191919]">
-                <div class="w-full mq-319:p-0 mq-869:px-[12%]">
+            <section class="w-full pt-8 pb-20 border relative mq-319:px-[18px] mq-869:px-8 mq-640:px-[4%] mq-1024:px-[2%] mq-1200:px-[12%]">
+                <div class="absolute h-[1px] w-full bg-[#191919] top-0 left-0"></div>
+                <div class="font-SF-Pro-Display w-full mq-319:p-0 mq-869:px-0">
                     <ul class="flex mq-319:gap-5 mq-869:gap-12">
-                        <li class="text-white text-lg leading-[150%] mq-319:text-[16px] mq-869:text-lg">&copy; 2025 Admiral</li>
-                        <li><a href="" class="text-white leading-[150%] mq-319:text-[16px] mq-869:text-lg">Legal</a></li>
-                        <li><a href="" class="text-white leading-[150%] mq-319:text-[16px] mq-869:text-lg">Status</a></li>
+                        <li data-aos="fade-right" data-aos-offset="0" class="text-white text-lg leading-[150%] mq-319:text-[16px] mq-869:text-lg">&copy; 2025 Admiral</li>
+                        <li><a href="" data-aos="fade-right" data-aos-offset="0" class="text-white leading-[150%] mq-319:text-[16px] mq-869:text-lg">Legal</a></li>
+                        <li><a href="" data-aos="fade-right" data-aos-offset="0" class="text-white leading-[150%] mq-319:text-[16px] mq-869:text-lg">Status</a></li>
                     </ul>
                 </div>
             </section>
@@ -1041,4 +932,7 @@
     </div>
 </body>
 </html>
-<!-- FONTS WITH NO LICENSE -->
+
+
+<!-- FIGMA DESIGN ↓↓
+https://www.figma.com/proto/rhjGlwNQ2aCXN6byYtqchP/Qdynamic-Admiral?page-id=30%3A5953&node-id=130-1418&viewport=433%2C129%2C0.07&t=ZajzJ8iGwkPH9AF8-1&scaling=contain&content-scaling=fixed -->

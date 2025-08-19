@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    /*
     //-- TO THE START SCROLL POSITION OF THE ELEMENT WITH ID: "comments-section-block" --//
     // CALCULATING POSITION (50% THIS CASE)
-    const commentsSectionBlock = document.querySelector('#comments-section-block')
+    const container = document.getElementById("comments-section-block");
+    let speed = 2;
 
-    const percentage = 0.5 // 0 = START, 1= FINAL
-    const maxScroll = commentsSectionBlock.scrollWidth - commentsSectionBlock.clientWidth
+    function autoScroll() {
+    container.scrollLeft += speed;
 
-    // TO MOVE THE SCROLL
-    commentsSectionBlock.scrollLeft = maxScroll * percentage
+    // cuando llegue al final del primer hijo
+    const firstChild = container.children[0];
+    if (firstChild.getBoundingClientRect().right < 0) {
+        container.appendChild(firstChild); // lo manda al final
+        container.scrollLeft -= firstChild.offsetWidth; // ajusta posición
+    }
 
-    commentsSectionBlock.scrollTo({
-        left: maxScroll * 0.5,
-        behavior: 'smooth',
-    })
+    requestAnimationFrame(autoScroll);
+    }
+
+    autoScroll();*/
 
     //-- FUNCTIONALITY AT FAQs SECTION, DEPLOY ANSWERS --//
     const faqs = document.querySelectorAll('.faqs-block')
@@ -94,6 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    AOS.init({ // TO STARTAOS ANIMATION
+        offset: 150,
+        once: true, // false FOR INFINITE REPETITIONS
+    }) 
+
+    /*
     //-- FUNCTIONALITY AT PROFILE BUTTON SECTION --//
     const profileBtnElements = document.querySelector('#profile-btn-elements')
     const profileBtn = document.querySelector('#profile-btn')
@@ -125,4 +136,5 @@ document.addEventListener('DOMContentLoaded', () => {
             hideProfileMenu()
         }
     })
+    */
 })
