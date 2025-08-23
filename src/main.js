@@ -1,25 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /*
-    //-- TO THE START SCROLL POSITION OF THE ELEMENT WITH ID: "comments-section-block" --//
-    // CALCULATING POSITION (50% THIS CASE)
-    const container = document.getElementById("comments-section-block");
-    let speed = 2;
-
-    function autoScroll() {
-    container.scrollLeft += speed;
-
-    // cuando llegue al final del primer hijo
-    const firstChild = container.children[0];
-    if (firstChild.getBoundingClientRect().right < 0) {
-        container.appendChild(firstChild); // lo manda al final
-        container.scrollLeft -= firstChild.offsetWidth; // ajusta posición
-    }
-
-    requestAnimationFrame(autoScroll);
-    }
-
-    autoScroll();*/
-
     //-- FUNCTIONALITY AT FAQs SECTION, DEPLOY ANSWERS --//
     const faqs = document.querySelectorAll('.faqs-block')
 
@@ -103,38 +82,4 @@ document.addEventListener('DOMContentLoaded', () => {
         offset: 150,
         once: true, // false FOR INFINITE REPETITIONS
     }) 
-
-    /*
-    //-- FUNCTIONALITY AT PROFILE BUTTON SECTION --//
-    const profileBtnElements = document.querySelector('#profile-btn-elements')
-    const profileBtn = document.querySelector('#profile-btn')
-    let isClose = true
-
-    profileBtn.addEventListener('click', () => {
-        if (isClose) {
-            showProfileMenu()
-        } else {
-            hideProfileMenu()
-        }
-    })
-    function showProfileMenu() {
-        profileBtnElements.style.transition = '300ms ease-in-out'
-        profileBtnElements.style.visibility = 'visible'
-        profileBtnElements.style.opacity = '1'
-        profileBtnElements.style.maxHeight = 'fit-content'
-        isClose = false
-    } 
-    function hideProfileMenu() {
-        profileBtnElements.style.transition = '300ms ease-in-out'
-        profileBtnElements.style.visibility = 'hidden'
-        profileBtnElements.style.opacity = '0'
-        profileBtnElements.style.maxHeight = '0%'
-        isClose = true
-    }
-    document.addEventListener('click', (e) => {
-        if (!isClose && !profileBtnElements.contains(e.target) && !profileBtn.contains(e.target)) {
-            hideProfileMenu()
-        }
-    })
-    */
 })
